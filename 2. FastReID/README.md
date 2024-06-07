@@ -5,7 +5,7 @@ Save weights files under "./weights/"
 
 
 ## Run
-Detection + feature extractionResults will be created under "../outputs/2. det_feat/" as pickle files
+Detection + feature extraction results will be created under "../outputs/2. det_feat/" as pickle files
 ```
 # For MOT17 validation
 python ext_feats.py --dataset "mot17" --pickle_path "../outputs/1. det/MOT17_val.pickle" --output_path "../outputs/2. det_feat/MOT17_val.pickle" --data_path "../../dataset/MOT17/train/"
