@@ -14,3 +14,7 @@ python track.py --dataset "MOT20" --mode "val"
 # For MOT20 test
 python track.py --dataset "MOT20" --mode "test"
 ```
+
+
+## Reference
+  - https://github.com/dyhBUPT/StrongSORT
