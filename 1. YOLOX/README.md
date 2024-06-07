@@ -15,7 +15,7 @@ Save weights files under "./weights/"
 
 
 ## Run
-Detection results will be created under "../outputs/1. det/"
+Detection results will be created under "../outputs/1. det/" as pickle files
 ```
 # For the MOT17 validation set
 python detect.py -f "exps/yolox_x_mot17_val.py" -c "weights/mot17_train_half.pth.tar" -b 1 -d 1 -n "../outputs/1. det/MOT17_val_nms_0.8.pickle" --fp16 --fuse
