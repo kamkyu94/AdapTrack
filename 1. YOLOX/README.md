@@ -29,3 +29,6 @@ python detect.py -f "exps/yolox_x_mot20_val.py" -c "weights/mot20_train_half.pth
 # For the MOT20 test
 python detect.py -f "exps/yolox_x_mot20_test.py" -c "weights/mot20_train.pth.tar" -b 1 -d 1 -n "../outputs/1. det/MOT20_test_nms_0.8.pickle" --fp16 --fuse
 ```
+
+## Reference
+This code is revised from https://github.com/Megvii-BaseDetection/YOLOX
