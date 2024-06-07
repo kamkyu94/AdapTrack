@@ -31,4 +31,5 @@ python detect.py -f "exps/yolox_x_mot20_test.py" -c "weights/mot20_train.pth.tar
 ```
 
 ## Reference
-This code is revised from https://github.com/Megvii-BaseDetection/YOLOX
+  - https://github.com/Megvii-BaseDetection/YOLOX
+  - https://github.com/ifzhang/ByteTrack
