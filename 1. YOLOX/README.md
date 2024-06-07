@@ -5,13 +5,14 @@ Save .json files under "./datasets/"
   - mot20_val.json: https://drive.google.com/file/d/12dwVn3qLO0L3IAOSJcVdYzpWhlOXmIFY/view?usp=drive_link
   - mot20_test.json: https://drive.google.com/file/d/1X6wyBOmtI6IFguAktNjoQ0zg0ZhNDGi2/view?usp=drive_link
 
+
 ## Model Zoo
 Save weights files under "./weights/"
   - mot17_train_half.pth.tar: https://drive.google.com/drive/u/0/folders/1cZblRvWRwIXCleuS2LAkIH7uB31ZDKis
   - mot7_train.pth.tar: https://drive.google.com/file/d/1OBazmX6rLdOdgvbnhIcU2up9YL2O_B9T/view?usp=drive_link
   - mot20_train_half.pth.tar: https://drive.google.com/file/d/1QQ58QjcJUFmyxfamyDm2nvT06VmDT_1J/view?usp=drive_link
   - mot20_train.pth.tar: https://drive.google.com/file/d/16lDABxaV8SXibDDV-8Nq3O8NgYQ1Ahrb/view?usp=drive_link
-    
+
 
 ## Run
 Detection results will be created under "../outputs/1. det/"
