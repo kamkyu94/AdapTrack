@@ -7,13 +7,13 @@ Developed in python3.8, pytorch 1.13
 
 
 ## Prepare
-1. Downlodad datasets:
+**1. Downlodad datasets**
   - MOT17: https://motchallenge.net/data/MOT17.zip
   - MOT20: https://motchallenge.net/data/MOT20.zip
 
 <br />
 
-2. Locate codes and datasets as below
+**2. Locate codes and datasets as below**
 ```
 - code
   - 1. YOLOX
@@ -27,6 +27,6 @@ Developed in python3.8, pytorch 1.13
 
 <br />
 
-3. Download and properly locate the GT files for the validation sets
+**3. Download and properly locate the GT files for the validation sets**
   - MOT17_val_gt: https://drive.google.com/file/d/1HQvUHv_ng35GhFpFgHXWz-Y4dQlI1sAa/view?usp=drive_link
   - MOT20_val_gt: https://drive.google.com/file/d/1b84UkQPKyNG0BHWBLO4eG3QCAXirBCLQ/view?usp=drive_link 
