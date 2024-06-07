@@ -1,7 +1,6 @@
 ## Run
 Tracking Results will be created under "./outputs/
 
-
 ```
 # For MOT17 validation
 python track.py --dataset "MOT17" --mode "val"
