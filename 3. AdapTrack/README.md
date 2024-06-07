@@ -1,5 +1,5 @@
 ## Run
-Tracking Results will be created under "./outputs/
+Tracking Results will be created under "./outputs/"
 
 ```
 # For MOT17 validation
