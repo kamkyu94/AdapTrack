@@ -19,3 +19,6 @@ python ext_feats.py --dataset "mot20" --pickle_path "../outputs/1. det/MOT20_val
 # For MOT20 test
 python ext_feats.py --dataset "mot20" --pickle_path "../outputs/1. det/MOT20_test.pickle" --output_path "../outputs/2. det_feat/MOT20_test.pickle" --data_path "../../dataset/MOT20/test/"
 ```
+
+## Reference
+This code is revised from https://github.com/JDAI-CV/fast-reid
