@@ -1,5 +1,6 @@
 # AdapTrack
 Official code for "AdapTrack: Adaptive Thresholding-Based Matching For Multi-Object Tracking", ICIP, 2024
+  - https://cmsworkshops.com/ICIP2024/papers/accepted_papers.php
 
 
 ## Environment
