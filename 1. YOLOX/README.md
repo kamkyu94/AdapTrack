@@ -1,7 +1,7 @@
 ## Datasets
 Save .json files under "./datasets/" 
   - [mot17_val.json](https://drive.google.com/file/d/1JFwLgTQckApe-gvFYf1Je05DPKf5pNUx/view?usp=drive_link) 
-  - [mot17_test.json](https://drive.google.com/file/d/1EGDJ12QTDKbA1GChs7lNi9pmVXOBOktC/view?usp=drive_link): 
+  - [mot17_test.json](https://drive.google.com/file/d/1EGDJ12QTDKbA1GChs7lNi9pmVXOBOktC/view?usp=drive_link)
   - [mot20_val.json](https://drive.google.com/file/d/12dwVn3qLO0L3IAOSJcVdYzpWhlOXmIFY/view?usp=drive_link)
   - [mot20_test.json](https://drive.google.com/file/d/1X6wyBOmtI6IFguAktNjoQ0zg0ZhNDGi2/view?usp=drive_link)
 
