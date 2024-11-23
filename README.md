@@ -1,9 +1,9 @@
 # AdapTrack
-Official code for "AdapTrack: Adaptive Thresholding-Based Matching For Multi-Object Tracking", ICIP, 2024
-  - https://ieeexplore.ieee.org/document/10648139
-
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/adaptrack-adaptive-thresholding-based/multi-object-tracking-on-mot17)](https://paperswithcode.com/sota/multi-object-tracking-on-mot17?p=adaptrack-adaptive-thresholding-based)<br>
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/adaptrack-adaptive-thresholding-based/multi-object-tracking-on-mot20-1)](https://paperswithcode.com/sota/multi-object-tracking-on-mot20-1?p=adaptrack-adaptive-thresholding-based)<br>
+
+Official code for "AdapTrack: Adaptive Thresholding-Based Matching For Multi-Object Tracking", ICIP, 2024
+  - https://ieeexplore.ieee.org/document/10648139
 
 ## Environment
 Developed in python3.8, pytorch 1.13
