@@ -22,7 +22,7 @@ class Tracker:
 
     def initiate_track(self, detection, frame_idx):
         self.tracks.append(Track(detection.to_cxcyah(), self.next_id, self.opt, detection.confidence, detection.feature))
-        print(f"Frame {frame_idx}: Initiated track {self.next_id} with confidence {detection.confidence}")
+        #print(f"Frame {frame_idx}: Initiated track {self.next_id} with confidence {detection.confidence}")
         self.next_id += 1
 
     def predict(self, frame_idx):
