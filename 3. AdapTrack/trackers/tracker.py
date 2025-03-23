@@ -86,7 +86,7 @@ class Tracker:
         matches, unmatched_tracks, unmatched_detections = self.match(detections, frame_idx)
         for track_idx, detection_idx in matches:
             self.tracks[track_idx].update(detections[detection_idx])
-            print(f"Frame {frame_idx}: Updated track {self.tracks[track_idx].track_id}, confirmed: {self.tracks[track_idx].is_confirmed()}")
+            #print(f"Frame {frame_idx}: Updated track {self.tracks[track_idx].track_id}, confirmed: {self.tracks[track_idx].is_confirmed()}")
         for track_idx in unmatched_tracks:
             self.tracks[track_idx].mark_missed()
             print(f"Frame {frame_idx}: Marked track {self.tracks[track_idx].track_id} as missed, confirmed: {self.tracks[track_idx].is_confirmed()}")
