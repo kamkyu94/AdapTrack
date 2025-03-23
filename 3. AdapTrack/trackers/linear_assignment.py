@@ -1,12 +1,11 @@
 import numpy as np
-from opts import opt
 from sklearn.mixture import GaussianMixture
 import trackers.kalman_filter as kalman_filter
 from scipy.optimize import linear_sum_assignment as linear_assignment
 from sklearn.cluster import KMeans, AgglomerativeClustering, SpectralClustering
 
 
-def gate_cost_matrix(cost_matrix, tracks, detections, track_indices, detection_indices):
+def gate_cost_matrix(cost_matrix, tracks, detections, track_indices, detection_indices, gating_lambda):
     # Get gating threshold
     gating_threshold = kalman_filter.chi2inv95[4]
 
@@ -23,16 +22,12 @@ def gate_cost_matrix(cost_matrix, tracks, detections, track_indices, detection_i
 
         # Update cost matrix
         cost_matrix[row, gating_distance > gating_threshold] = 1e5
-        cost_matrix[row] = opt.gating_lambda * cost_matrix[row] + (1 - opt.gating_lambda) * gating_distance
+        cost_matrix[row] = gating_lambda * cost_matrix[row] + (1 - gating_lambda) * gating_distance
 
     return cost_matrix
 
 
 def set_threshold(dists, ori_threshold, min_anchor, max_anchor):
-    # # More Sampling with linear assignment (Do not use)
-    # indices = linear_assignment(dists)
-    # dists = dists[indices[0], indices[1]]
-
     # Prepare
     threshold = ori_threshold
     dists_1d = dists.reshape(-1, 1)
@@ -46,22 +41,16 @@ def set_threshold(dists, ori_threshold, min_anchor, max_anchor):
 
         # Select Clustering
         model = KMeans(n_clusters=2, init=np.array([[min_anchor], [max_anchor]]), n_init=1, random_state=10000)
-        # model = AgglomerativeClustering(n_clusters=2, linkage='ward')
-        # model = SpectralClustering(n_clusters=2, assign_labels='kmeans', random_state=10000)
-        # model = GaussianMixture(n_components=2, means_init=np.array([[min_anchor], [max_anchor]]), random_state=10000)
 
         # Fit
         result = model.fit_predict(dists_1d)
 
-        # Rare exception (Only occurs with Gaussian mixture clustering)
+        # Rare exception
         if np.sum(result == 0) == 0 or np.sum(result == 1) == 0:
             return ori_threshold
 
         # Set threshold
         threshold = min(np.max(dists_1d[result == 0]), np.max(dists_1d[result == 1])) + 1e-5
-        # threshold = max(np.min(dists_1d[result == 0]), np.min(dists_1d[result == 1])) - 1e-5
-        # threshold = (np.max(dists_1d[result == 0]) + np.min(dists_1d[result == 1])) / 2
-        # threshold = (np.mean(dists_1d[result == 0]) + np.mean(dists_1d[result == 1])) / 2
 
     return threshold
 
@@ -73,14 +62,14 @@ def min_cost_matching(distance_metric, max_distance, tracks, detections, track_i
     if detection_indices is None:
         detection_indices = np.arange(len(detections))
 
-    # Nothing to match.
+    # Nothing to match
     if len(detection_indices) == 0 or len(track_indices) == 0:
         return [], track_indices, detection_indices
 
     # Split
     distance_metric, constraint_metric, adap_flag = distance_metric
 
-    # Calculate cost matrix 1
+    # Calculate cost matrix
     cost_matrix, _, cost_matrix_max = distance_metric(tracks, detections, track_indices, detection_indices)
 
     # Apply filtering
