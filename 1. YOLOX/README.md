@@ -21,7 +21,7 @@ Detection results will be created under "../outputs/1. det/" as pickle files
 python detect.py -f "exps/yolox_x_mot17_val.py" -c "weights/mot17_train_half.pth.tar" -b 1 -d 1 -n "../outputs/1. det/MOT17_val_nms_0.8.pickle" --fp16 --fuse
 
 # For MOT17 test
-python detect.py -f "exps/yolox_x_mot17_test.py" -c "weights/mot7_train.pth.tar" -b 1 -d 1 -n "../outputs/1. det/MOT17_test_nms_0.8.pickle" --fp16 --fuse
+python detect.py -f "exps/yolox_x_mot17_test.py" -c "weights/mot17_train.pth.tar" -b 1 -d 1 -n "../outputs/1. det/MOT17_test_nms_0.8.pickle" --fp16 --fuse
 
 # For MOT20 validation
 python detect.py -f "exps/yolox_x_mot20_val.py" -c "weights/mot20_train_half.pth.tar" -b 1 -d 1 -n "../outputs/1. det/MOT20_val_nms_0.8.pickle" --fp16 --fuse
